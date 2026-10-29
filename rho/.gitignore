@@ -1,0 +1,79 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+.Python
+*.egg-info/
+.venv/
+build/
+dist/
+
+# Tooling caches
+.cache/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.ipynb_checkpoints/
+.coverage
+coverage.xml
+htmlcov/
+
+# Node / web UI
+node_modules/
+
+# Secrets / environment
+.env
+.env.local
+
+# Agent & dev tooling
+.codex
+.claude/*
+!.claude/workflows/
+.agents/
+.worktrees/
+
+# Editors & OS
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*~
+
+# Experiment outputs
+runs/
+logs/
+snapshots/
+!tests/strategies/snapshots/
+data/cache/
+
+# LaTeX build artifacts
+*.aux
+*.bbl
+*.blg
+*.out
+*.toc
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.listing
+docs/paper/*.log
+
+# wrangler
+.wrangler/
+
+# Local experiment inputs, credentials, and outputs are never published.
+/configs/
+/data/
+/runs/
+/local/
+/trajectories/
+/results/
+/harness/
+.env*
+auth.json
+api_info.txt
+*.pem
+*.key

@@ -1,0 +1,50 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite it as below."
+title: "Evolving Agents in the Dark: Retrospective Harness Optimization via Self-Preference"
+authors:
+  - family-names: Pan
+    given-names: Wenbo
+  - family-names: Liu
+    given-names: Shujie
+  - family-names: Lin
+    given-names: Chin-Yew
+  - family-names: Zeng
+    given-names: Jingying
+  - family-names: Tang
+    given-names: Xianfeng
+  - family-names: Zhou
+    given-names: Xiangyang
+  - family-names: Lu
+    given-names: Yan
+  - family-names: Jia
+    given-names: Xiaohua
+year: 2026
+identifiers:
+  - type: other
+    value: "arXiv:2606.05922"
+    description: arXiv preprint
+repository-code: "https://github.com/wbopan/retro-harness"
+url: "https://paper-rho.wenbo.io"
+license: MIT
+preferred-citation:
+  type: article
+  title: "Evolving Agents in the Dark: Retrospective Harness Optimization via Self-Preference"
+  authors:
+    - family-names: Pan
+      given-names: Wenbo
+    - family-names: Liu
+      given-names: Shujie
+    - family-names: Lin
+      given-names: Chin-Yew
+    - family-names: Zeng
+      given-names: Jingying
+    - family-names: Tang
+      given-names: Xianfeng
+    - family-names: Zhou
+      given-names: Xiangyang
+    - family-names: Lu
+      given-names: Yan
+    - family-names: Jia
+      given-names: Xiaohua
+  year: 2026
+  journal: "arXiv preprint arXiv:2606.05922"

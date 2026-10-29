@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+set -euo pipefail
+rho_root="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")/.." && pwd)"
+exec "$rho_root/.venv/bin/python" "$rho_root/scripts/rho-ds.py" "$@"

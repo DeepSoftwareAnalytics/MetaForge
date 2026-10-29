@@ -1,0 +1,75 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rho"
+version = "0.1.0"
+description = "Minimal GT-free offline harness evolution loop"
+requires-python = ">=3.11,<3.14"
+dependencies = [
+    "fastapi>=0.115.0",
+    "fastembed>=0.8.0",
+    "litellm>=1.52.0",
+    "nltk>=3.9.4",
+    "numpy>=1.26.0",
+    "tenacity>=9.1.4",
+    "tiktoken>=0.12.0",
+    "uvicorn>=0.34.0",
+]
+
+[project.scripts]
+rho = "rho.cli:main"
+
+[project.optional-dependencies]
+dev = [
+  "httpx>=0.28",
+  "pytest>=8.0",
+  "pytest-xdist>=3.0",
+]
+swebench-pro = [
+  "datasets>=2.14.0",
+]
+gaia2 = [
+  "datasets>=2.14.0",
+  "meta-agents-research-environments>=1.2.0",
+]
+analysis = [
+    "matplotlib>=3.10.8",
+    "scikit-learn>=1.8.0",
+]
+reasoningbank = [
+    "google-cloud-aiplatform>=1.108.0",
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+# -n 50: pytest-xdist spawns up to 50 parallel workers. Real codex tests
+#        each spend ~1-5 min in codex, so parallelism is how we cut wall
+#        time — capped at min(50, n_tests), so in practice ~17 for
+#        hermetic and ~4 for codex.
+# --dist=loadfile: tests in the same file run on the same worker. Keeps
+#        codex session fixtures within-file (the scope="session"
+#        `codex_binary` probe runs once per worker, so one-file-per-worker
+#        minimizes duplicated probing cost).
+addopts = "-n 50 --dist=loadfile -m 'not locomo and not swebench_pro and not terminal_bench_2 and not gaia2'"
+markers = [
+  "codex: real-codex smoke tests (requires codex CLI)",
+  "locomo: slow LOCOMO end-to-end tests (opt-in, requires codex CLI)",
+  "swebench_pro: slow SWE-bench Pro Docker/Codex integration tests",
+  "terminal_bench_2: slow Terminal-Bench 2 Docker-backed tests",
+  "gaia2: slow GAIA-2 ARE/Codex evolve integration test (opt-in)",
+]
+
+[dependency-groups]
+dev = [
+    "httpx>=0.28.1",
+    "pytest>=9.0.3",
+    "pytest-xdist>=3.8.0",
+]
