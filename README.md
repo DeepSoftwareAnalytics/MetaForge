@@ -1,7 +1,5 @@
 # MetaForge
 
-MetaForge is DeepSoftwareAnalytics' research fork of [OpenAI Codex](https://github.com/openai/codex), for studying and improving agent harnesses. The initial project additions are English source-reading guides; no Codex runtime behavior is changed by this documentation update.
-
 See the [MetaForge documentation index](docs/metaforge/README.md) for the repository guide, test-to-patch source map, and native tools and skills inventory. These guides document a pinned historical source snapshot, which is distinct from the upstream commit initially forked here.
 
 The upstream Codex README follows. Its installation instructions install upstream releases, not a build of this fork.
