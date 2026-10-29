@@ -1,8 +1,6 @@
 # MetaForge
 
-请参阅 [MetaForge 文档索引](docs/metaforge/README.md)，了解仓库导览、从测试到补丁的源码路径，以及原生工具和技能清单。这些指南基于一个固定的历史源码快照编写，该快照与创建本研究分支时使用的上游提交不同。
-
-以下为上游 Codex README 的中文翻译。其中的安装命令安装的是上游发布版本，而不是本研究分支的构建版本。
+请参阅 [MetaForge 文档索引](docs/metaforge/README.md)，了解仓库导览、从测试到补丁的源码路径，以及原生工具和技能清单。
 
 ---
 
@@ -72,12 +70,6 @@ brew install --cask codex
 每个压缩包仅包含一个文件，其名称中带有平台信息，例如 `codex-x86_64-unknown-linux-musl`。解压后，通常可以将它重命名为 `codex`。
 
 </details>
-
-### 通过 ChatGPT 套餐使用 Codex
-
-运行 `codex`，选择 **Sign in with ChatGPT（使用 ChatGPT 登录）**。我们建议登录 ChatGPT 账号，通过 Plus、Pro、Business、Edu 或 Enterprise 套餐使用 Codex。[了解 ChatGPT 套餐包含的功能](https://help.openai.com/en/articles/11369540-codex-in-chatgpt)。
-
-你也可以通过 API 密钥使用 Codex，但需要完成[额外配置](https://developers.openai.com/codex/auth#sign-in-with-an-api-key)。
 
 ## 文档
 
