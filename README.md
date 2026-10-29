@@ -2,6 +2,8 @@
 
 请参阅 [MetaForge 文档索引](docs/metaforge/README.md)，了解仓库导览、从测试到补丁的源码路径，以及原生工具和技能清单。
 
+本仓库的 [`rho/`](rho/) 目录收录 RHO（Retrospective Harness Optimization）及我们为 Codex CLI、DeepSeek 和 SWE-bench Pro 增加的实验适配。RHO 根据解题轨迹诊断问题，演化指导文档与辅助脚本等 harness 内容，通过成对评审选择候选，再在独立测试集上比较 baseline 与最终 harness。当前流程支持题目容器隔离、受控依赖下载和模型请求预算，不修改 Codex 的 Rust 源码。安装、本地输入准备及 170 次模型请求实验的运行方法见 [RHO 中文说明](rho/README.md)；数据集、历史轨迹和实际运行配置不随仓库发布。RHO 目录保留上游 [MIT 许可证](rho/LICENSE)。
+
 ---
 
 <p align="center"><strong>Codex CLI</strong> 是 OpenAI 推出的编程智能体，可在你的计算机上本地运行。
